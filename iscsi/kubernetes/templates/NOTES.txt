@@ -1,0 +1,4 @@
+NGX Storage iSCSI CSI driver has been installed.
+
+Verify the deployment with:
+  kubectl -n {{ .Release.Namespace }} get pods -l app.kubernetes.io/name=iscsi-csi-ngxstorage

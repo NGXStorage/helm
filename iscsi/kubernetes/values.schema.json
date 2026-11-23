@@ -1,0 +1,243 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "Values for the NGX Storage iSCSI CSI driver chart for upstream Kubernetes",
+  "properties": {
+    "image": {
+      "type": "object",
+      "title": "Driver image",
+      "properties": {
+        "repository": {
+          "type": "string",
+          "title": "Image repository",
+          "default": "quay.io/ngxstorage/iscsi-csi-ngxstorage"
+        },
+        "tag": {
+          "type": "string",
+          "title": "Image tag",
+          "description": "Rolling development tag used as the fallback when image.digest is empty. Production releases pin image.digest.",
+          "default": "ef188f0"
+        },
+        "digest": {
+          "type": "string",
+          "title": "Immutable image digest",
+          "description": "Optional sha256 digest. When non-empty the chart renders repository@digest instead of repository:tag.",
+          "pattern": "^$|^sha256:[0-9a-f]{64}$",
+          "default": ""
+        },
+        "pullPolicy": {
+          "type": "string",
+          "title": "Image pull policy",
+          "enum": [
+            "Always",
+            "IfNotPresent",
+            "Never"
+          ],
+          "default": "IfNotPresent"
+        }
+      },
+      "required": [
+        "repository",
+        "tag"
+      ]
+    },
+    "logLevel": {
+      "type": "string",
+      "title": "Console log level",
+      "description": "Verbosity of the driver console output. File logs remain detailed regardless of this value.",
+      "enum": [
+        "debug",
+        "info",
+        "warn",
+        "error",
+        "dpanic",
+        "panic",
+        "fatal"
+      ],
+      "default": "info"
+    },
+    "driverNamePrefix": {
+      "type": "string",
+      "title": "Driver name prefix",
+      "description": "Single label prepended to the CSI driver name and to driver resource names. Empty preserves iscsi.csi.ngxstorage.com and the iscsi-csi-ngxstorage resource names; a non-empty prefix produces <prefix>.iscsi.csi.ngxstorage.com (driver name) and <prefix>-iscsi-csi-ngxstorage (resource names) so a second driver instance can serve a distinct NGX Storage backend on the same cluster (for example 201 or 205).",
+      "default": ""
+    },
+    "nodePlacement": {
+      "type": "string",
+      "title": "Node pod placement",
+      "description": "Where the node DaemonSet may run. Use worker for a high-speed backend reachable only from worker NICs, master for control-plane-only placement, or all for the general-purpose backend.",
+      "enum": [
+        "all",
+        "master",
+        "worker"
+      ],
+      "default": "all"
+    },
+    "secret": {
+      "type": "object",
+      "title": "Backend Secret",
+      "description": "Prefer an existing Secret in production. Set create=true only when managing the Secret through Helm.",
+      "properties": {
+        "create": {
+          "type": "boolean",
+          "title": "Create the Secret",
+          "default": false
+        },
+        "name": {
+          "type": "string",
+          "title": "Secret name",
+          "default": "iscsi-csi-ngxstorage-config"
+        },
+        "storageIPs": {
+          "type": "string",
+          "title": "Storage IPs",
+          "description": "Comma-separated NGX Storage management API IPs. Required when secret.create=true.",
+          "default": ""
+        },
+        "poolName": {
+          "type": "string",
+          "title": "Pool name",
+          "description": "NGX Storage share pool name. Required when secret.create=true.",
+          "default": ""
+        },
+        "apiKey": {
+          "type": "string",
+          "title": "API key",
+          "description": "NGX Storage management API key. Required when secret.create=true.",
+          "default": ""
+        },
+        "portalGroup": {
+          "type": "string",
+          "title": "iSCSI portal group",
+          "description": "Optional pre-configured iSCSI portal group name.",
+          "default": ""
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "snapshotClass": {
+      "type": "object",
+      "title": "VolumeSnapshotClass",
+      "properties": {
+        "create": {
+          "type": "boolean",
+          "title": "Create the VolumeSnapshotClass",
+          "description": "When true, the chart installs a VolumeSnapshotClass. The cluster must provide the snapshot CRDs and controller; disable this when the snapshot API is unavailable.",
+          "default": true
+        }
+      }
+    },
+    "controllerPlacement": {
+      "type": "string",
+      "title": "Controller pod placement",
+      "description": "Where the controller Deployment may run. Use master (default) for control-plane placement, worker for worker-only, or all.",
+      "enum": [
+        "all",
+        "master",
+        "worker"
+      ],
+      "default": "master"
+    },
+    "controllerLivenessPort": {
+      "type": "integer",
+      "title": "Controller liveness probe port",
+      "description": "HTTP port for the controller liveness-probe sidecar. A second driver instance must use a different port.",
+      "minimum": 1,
+      "maximum": 65535,
+      "default": 9808
+    },
+    "nodeLivenessPort": {
+      "type": "integer",
+      "title": "Node liveness probe port",
+      "description": "HTTP port for the node liveness-probe sidecar. A second driver instance in hostNetwork on the same worker must use a different port.",
+      "minimum": 1,
+      "maximum": 65535,
+      "default": 9812
+    },
+    "coordination": {
+      "type": "object",
+      "title": "Distributed coordination",
+      "description": "Fixed pre-created Kubernetes Lease shard pool used for cross-pod CSI mutation serialization. Changing the shard modulus requires a coordinated migration boundary, not a mixed rolling upgrade.",
+      "properties": {
+        "shardCount": {
+          "type": "integer",
+          "title": "Operation Lease shard count",
+          "enum": [
+            32,
+            64,
+            128,
+            256
+          ],
+          "default": 128
+        }
+      }
+    },
+    "sidecars": {
+      "type": "object",
+      "title": "CSI sidecar images",
+      "description": "Immutable Quay mirror references for upstream CSI sidecars.",
+      "properties": {
+        "csiProvisioner": {
+          "type": "string",
+          "title": "csiProvisioner"
+        },
+        "csiAttacher": {
+          "type": "string",
+          "title": "csiAttacher"
+        },
+        "csiResizer": {
+          "type": "string",
+          "title": "csiResizer"
+        },
+        "csiSnapshotter": {
+          "type": "string",
+          "title": "csiSnapshotter"
+        },
+        "csiNodeDriverRegistrar": {
+          "type": "string",
+          "title": "csiNodeDriverRegistrar"
+        },
+        "livenessProbe": {
+          "type": "string",
+          "title": "livenessProbe"
+        }
+      }
+    }
+  },
+  "required": [
+    "image",
+    "secret",
+    "snapshotClass"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "secret": {
+            "properties": {
+              "create": {
+                "const": true
+              }
+            }
+          }
+        },
+        "required": [
+          "secret"
+        ]
+      },
+      "then": {
+        "properties": {
+          "secret": {
+            "required": [
+              "storageIPs",
+              "poolName",
+              "apiKey"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

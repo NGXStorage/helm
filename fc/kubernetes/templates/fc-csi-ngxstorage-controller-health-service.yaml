@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "ngxstorage.fullname" . }}-controller-health
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app.kubernetes.io/name: fc-csi-ngxstorage
+    app.kubernetes.io/component: controller-health
+    app.kubernetes.io/instance: {{ include "ngxstorage.fullname" . }}
+spec:
+  selector:
+    app.kubernetes.io/name: fc-csi-ngxstorage
+    app.kubernetes.io/component: controller
+    app.kubernetes.io/instance: {{ include "ngxstorage.fullname" . }}
+  ports:
+    - name: healthz
+      port: {{ .Values.controllerLivenessPort }}
+      targetPort: {{ .Values.controllerLivenessPort }}

@@ -1,0 +1,7 @@
+apiVersion: v2
+name: nfs-csi-ngxstorage-kubernetes
+description: NGX Storage NFS CSI driver for upstream Kubernetes
+type: application
+kubeVersion: ">=1.25.0-0"
+version: 26.1.1
+appVersion: "26.01"

@@ -1,0 +1,1161 @@
+apiVersion: v1
+entries:
+  fc-csi-ngxstorage-kubernetes:
+  - apiVersion: v2
+    appVersion: "26.01"
+    created: "2026-11-23T12:13:22.506153826+03:00"
+    description: NGX Storage FC CSI driver for upstream Kubernetes
+    digest: 65c66771156cba0dbb8d8616eea397f8d3d8b82056b2dc21f48d4fdfd4cc3084
+    kubeVersion: '>=1.25.0-0'
+    name: fc-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/fc-csi-ngxstorage-kubernetes-26.1.1.tgz
+    version: 26.1.1
+  - apiVersion: v2
+    appVersion: "26.01"
+    created: "2026-11-23T12:13:22.505870162+03:00"
+    description: NGX Storage FC CSI driver for upstream Kubernetes
+    digest: ce31912a1d6a073f1f7e482abca0e369ebeb29efe6830669ee0d6a040e9e3e8f
+    kubeVersion: '>=1.25.0-0'
+    name: fc-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/fc-csi-ngxstorage-kubernetes-26.1.0.tgz
+    version: 26.1.0
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.505616259+03:00"
+    description: NGX Storage FC CSI driver for upstream Kubernetes
+    digest: f57c22c3e40a4796a1c194f62084b8a156057191d7c16b5ddd749b653a2aa10b
+    kubeVersion: '>=1.25.0-0'
+    name: fc-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/fc-csi-ngxstorage-kubernetes-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.505343256+03:00"
+    description: NGX Storage FC CSI driver for upstream Kubernetes
+    digest: b5d4438f081bc07348861d368249d49df01b2d3d47f2a224a248c3bb29e54038
+    kubeVersion: '>=1.25.0-0'
+    name: fc-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/fc-csi-ngxstorage-kubernetes-0.8.4-beta.2.tgz
+    version: 0.8.4-beta.2
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.505080413+03:00"
+    description: NGXStorage FC CSI driver for upstream Kubernetes
+    digest: 9bcd2a3972b52feed19255635f42f381f69842387dcd2ec6f410a87e6b066bbb
+    kubeVersion: '>=1.25.0-0'
+    name: fc-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/fc-csi-ngxstorage-kubernetes-0.8.4-beta.1.tgz
+    version: 0.8.4-beta.1
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.504826328+03:00"
+    description: NGXStorage FC CSI driver for upstream Kubernetes
+    digest: f25d11e43be417b83ad955083576341483f82d4945592931c6126fccae99fc6e
+    kubeVersion: '>=1.25.0-0'
+    name: fc-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/fc-csi-ngxstorage-kubernetes-0.8.3.tgz
+    version: 0.8.3
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.504591298+03:00"
+    description: NGXStorage FC CSI driver for upstream Kubernetes
+    digest: aa6851d61e4ead98369a20c04851221795a87c5d972351c55abe846c8d860f0f
+    kubeVersion: '>=1.25.0-0'
+    name: fc-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/fc-csi-ngxstorage-kubernetes-0.8.2.tgz
+    version: 0.8.2
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.504348982+03:00"
+    description: NGXStorage FC CSI driver for upstream Kubernetes
+    digest: 46339afdc68134688fba1773cf1334dd1647c6643aa072dd3e3d5ff855aed91e
+    kubeVersion: '>=1.25.0-0'
+    name: fc-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/fc-csi-ngxstorage-kubernetes-0.8.1.tgz
+    version: 0.8.1
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.504103749+03:00"
+    description: NGXStorage FC CSI driver for upstream Kubernetes
+    digest: f97e0771be5b1f327943048506bbff7ca3a3ac4185a9be3a4be39fdaa2d9f696
+    kubeVersion: '>=1.25.0-0'
+    name: fc-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/fc-csi-ngxstorage-kubernetes-0.8.0.tgz
+    version: 0.8.0
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.503838191+03:00"
+    description: NGXStorage FC CSI driver for upstream Kubernetes
+    digest: 253b0c7ac70078a153d1e328f0a34eefcfe891186da83621f71d69f25b8c758b
+    kubeVersion: '>=1.25.0-0'
+    name: fc-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/fc-csi-ngxstorage-kubernetes-0.7.0.tgz
+    version: 0.7.0
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.503592554+03:00"
+    description: NGXStorage FC CSI driver for upstream Kubernetes
+    digest: 911d2ecff7a6602039fecdb5021c413c17ebd2b739166e36d64b76e5082bbcc9
+    kubeVersion: '>=1.25.0-0'
+    name: fc-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/fc-csi-ngxstorage-kubernetes-0.6.0.tgz
+    version: 0.6.0
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.50334572+03:00"
+    description: NGXStorage FC CSI driver for upstream Kubernetes
+    digest: cc2d58cd12d38997a05504146fb9795fbc055b397edc614cd81ad5a6328e745b
+    kubeVersion: '>=1.25.0-0'
+    name: fc-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/fc-csi-ngxstorage-kubernetes-0.5.0.tgz
+    version: 0.5.0
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.503093893+03:00"
+    description: NGXStorage FC CSI driver for upstream Kubernetes
+    digest: 6a39789a12fbe894ada2d8c93b027895f3ef54cddf1a047dd22b9c5442560bf5
+    kubeVersion: '>=1.25.0-0'
+    name: fc-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/fc-csi-ngxstorage-kubernetes-0.4.0.tgz
+    version: 0.4.0
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.502844294+03:00"
+    description: NGXStorage FC CSI driver for upstream Kubernetes
+    digest: 5d3094a8debb6a3abb85f30a56defccd7c1d31e84ab5122f3d43d906173cb02d
+    kubeVersion: '>=1.25.0-0'
+    name: fc-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/fc-csi-ngxstorage-kubernetes-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.502639853+03:00"
+    description: NGXStorage FC CSI driver for upstream Kubernetes
+    digest: 1e3c6858b71b6f65d5f4ad6b0512154cb3e0c9055afcd046356537a301ab6d2d
+    kubeVersion: '>=1.25.0-0'
+    name: fc-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/fc-csi-ngxstorage-kubernetes-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 2.0.3
+    created: "2026-11-23T12:13:22.502431486+03:00"
+    description: NGX FC CSI driver for upstream Kubernetes
+    digest: e8050f18af84d5bfe5d2d6a54cd71e2868689f022f283e8a43945c808387456e
+    kubeVersion: '>=1.25.0-0'
+    name: fc-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/fc-csi-ngxstorage-kubernetes-0.1.0.tgz
+    version: 0.1.0
+  fc-csi-ngxstorage-openshift:
+  - annotations:
+      charts.openshift.io/name: NGX Storage FC CSI Driver
+    apiVersion: v2
+    appVersion: "26.01"
+    created: "2026-11-23T12:13:22.510707964+03:00"
+    description: NGX Storage FC CSI driver for Red Hat OpenShift
+    digest: 29fc75bb24a5918de2f8a353a0f1ceb374c2e294b020f0a18bf871c58218cfdf
+    kubeVersion: '>=1.25.0-0'
+    name: fc-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/fc-csi-ngxstorage-openshift-26.1.1.tgz
+    version: 26.1.1
+  - annotations:
+      charts.openshift.io/name: NGX Storage FC CSI Driver
+    apiVersion: v2
+    appVersion: "26.01"
+    created: "2026-11-23T12:13:22.510459359+03:00"
+    description: NGX Storage FC CSI driver for Red Hat OpenShift
+    digest: 66281af5568acbf13028c86890d2085a14a7c534a45014115b448d009022af37
+    kubeVersion: '>=1.25.0-0'
+    name: fc-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/fc-csi-ngxstorage-openshift-26.1.0.tgz
+    version: 26.1.0
+  - annotations:
+      charts.openshift.io/name: NGX Storage FC CSI Driver
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.510205632+03:00"
+    description: NGX Storage FC CSI driver for Red Hat OpenShift
+    digest: 8838d22b517070e04ccfc693c8f3f3f449e254bde0a66bf53a73017f7c9454bf
+    kubeVersion: '>=1.25.0-0'
+    name: fc-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/fc-csi-ngxstorage-openshift-1.0.0.tgz
+    version: 1.0.0
+  - annotations:
+      charts.openshift.io/name: NGX Storage FC CSI Driver
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.50994989+03:00"
+    description: NGX Storage FC CSI driver for Red Hat OpenShift
+    digest: 4e87db4eb9a3e52b5bc0f6bb97bb0d3cd4e44427d065543b7a2dcdceff660e1e
+    kubeVersion: '>=1.25.0-0'
+    name: fc-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/fc-csi-ngxstorage-openshift-0.8.4-beta.2.tgz
+    version: 0.8.4-beta.2
+  - annotations:
+      charts.openshift.io/name: NGXStorage FC CSI Driver
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.509699543+03:00"
+    description: NGXStorage FC CSI driver for Red Hat OpenShift
+    digest: 897688a4a2d387a61eceed1dc62b20b63e7f835de18797a4c0b98af58d276867
+    kubeVersion: '>=1.25.0-0'
+    name: fc-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/fc-csi-ngxstorage-openshift-0.8.4-beta.1.tgz
+    version: 0.8.4-beta.1
+  - annotations:
+      charts.openshift.io/name: NGXStorage FC CSI Driver
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.509445005+03:00"
+    description: NGXStorage FC CSI driver for Red Hat OpenShift
+    digest: be180093599a8ca0bb8d815c41dc8779ff1c5495670be7907c7c5d631e25ac66
+    kubeVersion: '>=1.25.0-0'
+    name: fc-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/fc-csi-ngxstorage-openshift-0.8.3.tgz
+    version: 0.8.3
+  - annotations:
+      charts.openshift.io/name: NGXStorage FC CSI Driver
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.50919073+03:00"
+    description: NGXStorage FC CSI driver for Red Hat OpenShift
+    digest: 438bc7cc21e872c6c69cf4a51667d487f833c38828c641b4148b980c21a40e9a
+    kubeVersion: '>=1.25.0-0'
+    name: fc-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/fc-csi-ngxstorage-openshift-0.8.2.tgz
+    version: 0.8.2
+  - annotations:
+      charts.openshift.io/name: NGXStorage FC CSI Driver
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.508922228+03:00"
+    description: NGXStorage FC CSI driver for Red Hat OpenShift
+    digest: 3c351aff89de64ee0227887aa9f21bf08165c82bd807445b8344a8b685043230
+    kubeVersion: '>=1.25.0-0'
+    name: fc-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/fc-csi-ngxstorage-openshift-0.8.1.tgz
+    version: 0.8.1
+  - annotations:
+      charts.openshift.io/name: NGXStorage FC CSI Driver
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.508673849+03:00"
+    description: NGXStorage FC CSI driver for Red Hat OpenShift
+    digest: 68c12ee238fccc75629344341cef394f94e68084d013cfc9639f80ea3f711ded
+    kubeVersion: '>=1.25.0-0'
+    name: fc-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/fc-csi-ngxstorage-openshift-0.8.0.tgz
+    version: 0.8.0
+  - annotations:
+      charts.openshift.io/name: NGXStorage FC CSI Driver
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.508417504+03:00"
+    description: NGXStorage FC CSI driver for Red Hat OpenShift
+    digest: 1d96ef88c2f735fdb9eb8dc19f03b82eda927a17390f160a1d0c3e5f3da50750
+    kubeVersion: '>=1.25.0-0'
+    name: fc-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/fc-csi-ngxstorage-openshift-0.7.0.tgz
+    version: 0.7.0
+  - annotations:
+      charts.openshift.io/name: NGXStorage FC CSI Driver
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.508161178+03:00"
+    description: NGXStorage FC CSI driver for Red Hat OpenShift
+    digest: e14107f8163addffe27b03c71aac789fcee4976ff02ddd11046d6262469c59d8
+    kubeVersion: '>=1.25.0-0'
+    name: fc-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/fc-csi-ngxstorage-openshift-0.6.0.tgz
+    version: 0.6.0
+  - annotations:
+      charts.openshift.io/name: NGXStorage FC CSI Driver
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.50786686+03:00"
+    description: NGXStorage FC CSI driver for Red Hat OpenShift
+    digest: 940df9f59801607e5679087275b689ff29c6d0463eaf915234397f8819220824
+    kubeVersion: '>=1.25.0-0'
+    name: fc-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/fc-csi-ngxstorage-openshift-0.5.0.tgz
+    version: 0.5.0
+  - annotations:
+      charts.openshift.io/name: NGXStorage FC CSI Driver
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.507567588+03:00"
+    description: NGXStorage FC CSI driver for Red Hat OpenShift
+    digest: 3f17fad97bc1c589851194f0780e00dd39a24c7e0887f7eddaa0a770b117b7d7
+    kubeVersion: '>=1.25.0-0'
+    name: fc-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/fc-csi-ngxstorage-openshift-0.4.0.tgz
+    version: 0.4.0
+  - annotations:
+      charts.openshift.io/name: NGXStorage FC CSI Driver
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.507290075+03:00"
+    description: NGXStorage FC CSI driver for Red Hat OpenShift
+    digest: 9bf95a42d81d77e705a9041967912c08122e1386aaaafd805300b55e95fec708
+    kubeVersion: '>=1.25.0-0'
+    name: fc-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/fc-csi-ngxstorage-openshift-0.3.0.tgz
+    version: 0.3.0
+  - annotations:
+      charts.openshift.io/name: NGXStorage FC CSI Driver
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.507022406+03:00"
+    description: NGXStorage FC CSI driver for Red Hat OpenShift
+    digest: 6c04f5bd6ac3595011a9d22b2749ce0602d394f15496a6351e54d51775012a4e
+    kubeVersion: '>=1.25.0-0'
+    name: fc-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/fc-csi-ngxstorage-openshift-0.2.0.tgz
+    version: 0.2.0
+  - annotations:
+      charts.openshift.io/name: NGX FC CSI Driver
+    apiVersion: v2
+    appVersion: 2.0.3
+    created: "2026-11-23T12:13:22.506446196+03:00"
+    description: NGX FC CSI driver for Red Hat OpenShift
+    digest: 9efb08dddfbee8918c8cf5282540007bc11e776d94271d572e20af8967d8b3a5
+    kubeVersion: '>=1.25.0-0'
+    name: fc-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/fc-csi-ngxstorage-openshift-0.1.0.tgz
+    version: 0.1.0
+  iscsi-csi-ngxstorage-kubernetes:
+  - apiVersion: v2
+    appVersion: "26.01"
+    created: "2026-11-23T12:13:22.515221232+03:00"
+    description: NGX Storage iSCSI CSI driver for upstream Kubernetes
+    digest: a4b11269693eee861dee7e1555a3b2cf3563395da424b228b9120cff470dfe39
+    kubeVersion: '>=1.25.0-0'
+    name: iscsi-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/iscsi-csi-ngxstorage-kubernetes-26.1.1.tgz
+    version: 26.1.1
+  - apiVersion: v2
+    appVersion: "26.01"
+    created: "2026-11-23T12:13:22.514974392+03:00"
+    description: NGX Storage iSCSI CSI driver for upstream Kubernetes
+    digest: 582ce78d248451b4f64d119df7db7de87d016378b3649c08e69658df13b0f29e
+    kubeVersion: '>=1.25.0-0'
+    name: iscsi-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/iscsi-csi-ngxstorage-kubernetes-26.1.0.tgz
+    version: 26.1.0
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.51473813+03:00"
+    description: NGX Storage iSCSI CSI driver for upstream Kubernetes
+    digest: 125951a49da91d3c4fd1266b96482bbf07dfbc1b010537013b2e0adfce7e5b60
+    kubeVersion: '>=1.25.0-0'
+    name: iscsi-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/iscsi-csi-ngxstorage-kubernetes-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.514499259+03:00"
+    description: NGX Storage iSCSI CSI driver for upstream Kubernetes
+    digest: 512b14c40d75a451919030e063796b57e1c82229d0bddbc88ee9b23f259364a7
+    kubeVersion: '>=1.25.0-0'
+    name: iscsi-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/iscsi-csi-ngxstorage-kubernetes-0.8.4-beta.2.tgz
+    version: 0.8.4-beta.2
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.51425978+03:00"
+    description: NGXStorage iSCSI CSI driver for upstream Kubernetes
+    digest: c2b1e1a60bc28401c06b3a376bfbab075acc9efe6da47ed5f818f03928aae67f
+    kubeVersion: '>=1.25.0-0'
+    name: iscsi-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/iscsi-csi-ngxstorage-kubernetes-0.8.4-beta.1.tgz
+    version: 0.8.4-beta.1
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.514018119+03:00"
+    description: NGXStorage iSCSI CSI driver for upstream Kubernetes
+    digest: d022c5c11dd2c5afad5d4ce29cc7f8568d6639acc757df263bfebffac5fd9f8d
+    kubeVersion: '>=1.25.0-0'
+    name: iscsi-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/iscsi-csi-ngxstorage-kubernetes-0.8.3.tgz
+    version: 0.8.3
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.513782672+03:00"
+    description: NGXStorage iSCSI CSI driver for upstream Kubernetes
+    digest: f8c073af48fa2ca0d7a73d49cd7472abc064bdedddffe0052c4b95018f984a96
+    kubeVersion: '>=1.25.0-0'
+    name: iscsi-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/iscsi-csi-ngxstorage-kubernetes-0.8.2.tgz
+    version: 0.8.2
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.513540567+03:00"
+    description: NGXStorage iSCSI CSI driver for upstream Kubernetes
+    digest: 69238ab9d80e7fb57486dc01c9dcdf215731bf4c6812fb8bded4d8ac20bc97c5
+    kubeVersion: '>=1.25.0-0'
+    name: iscsi-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/iscsi-csi-ngxstorage-kubernetes-0.8.1.tgz
+    version: 0.8.1
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.513292991+03:00"
+    description: NGXStorage iSCSI CSI driver for upstream Kubernetes
+    digest: dc96c0b2f808ecd14ba9d6d7536a61ed6122e3eaa6280b6319ca08e4f2b5d3f9
+    kubeVersion: '>=1.25.0-0'
+    name: iscsi-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/iscsi-csi-ngxstorage-kubernetes-0.8.0.tgz
+    version: 0.8.0
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.513029923+03:00"
+    description: NGXStorage iSCSI CSI driver for upstream Kubernetes
+    digest: 451b529fa075f6822b8ee163e6f280317f085495e0e7ab64f846f97b2ac404fb
+    kubeVersion: '>=1.25.0-0'
+    name: iscsi-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/iscsi-csi-ngxstorage-kubernetes-0.7.0.tgz
+    version: 0.7.0
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.512788135+03:00"
+    description: NGXStorage iSCSI CSI driver for upstream Kubernetes
+    digest: f37bc5c9a606252c65c50f462098ef34e5e9aa32896f069eda73d4e42bd83430
+    kubeVersion: '>=1.25.0-0'
+    name: iscsi-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/iscsi-csi-ngxstorage-kubernetes-0.6.0.tgz
+    version: 0.6.0
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.512536259+03:00"
+    description: NGXStorage iSCSI CSI driver for upstream Kubernetes
+    digest: 9ca09bd3d8560544bfe96c9c27b9ffccc15d00678486188eb7d3589c0eb1a617
+    kubeVersion: '>=1.25.0-0'
+    name: iscsi-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/iscsi-csi-ngxstorage-kubernetes-0.5.0.tgz
+    version: 0.5.0
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.512276459+03:00"
+    description: NGXStorage iSCSI CSI driver for upstream Kubernetes
+    digest: 23aaa9db7caf9e32babc47e6a35a14811d086083160fc2870e9487e6ee9a25e0
+    kubeVersion: '>=1.25.0-0'
+    name: iscsi-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/iscsi-csi-ngxstorage-kubernetes-0.4.0.tgz
+    version: 0.4.0
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.511983329+03:00"
+    description: NGXStorage iSCSI CSI driver for upstream Kubernetes
+    digest: 56f38d62726542a4c46b5ecf53ea139aa65fad7c11798b678a584d6a7dc199e0
+    kubeVersion: '>=1.25.0-0'
+    name: iscsi-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/iscsi-csi-ngxstorage-kubernetes-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.511650735+03:00"
+    description: NGXStorage iSCSI CSI driver for upstream Kubernetes
+    digest: 19b7818d0e903542bd83bf24d4935b5aa0ae32c25163eb41f50f3607d075d860
+    kubeVersion: '>=1.25.0-0'
+    name: iscsi-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/iscsi-csi-ngxstorage-kubernetes-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 2.0.3
+    created: "2026-11-23T12:13:22.511175216+03:00"
+    description: NGX iSCSI CSI driver for upstream Kubernetes
+    digest: 9834d2887b08c202ff4a379de1581b217dd8d9ae395cc34d8349bf236dd1fb03
+    kubeVersion: '>=1.25.0-0'
+    name: iscsi-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/iscsi-csi-ngxstorage-kubernetes-0.1.0.tgz
+    version: 0.1.0
+  iscsi-csi-ngxstorage-openshift:
+  - annotations:
+      charts.openshift.io/name: NGX Storage iSCSI CSI Driver
+    apiVersion: v2
+    appVersion: "26.01"
+    created: "2026-11-23T12:13:22.519608752+03:00"
+    description: NGX Storage iSCSI CSI driver for Red Hat OpenShift
+    digest: 21530174028cf86d5b9a6cf6634bb3505801318cc5d7e6c2243c78e649f96a4f
+    kubeVersion: '>=1.25.0-0'
+    name: iscsi-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/iscsi-csi-ngxstorage-openshift-26.1.1.tgz
+    version: 26.1.1
+  - annotations:
+      charts.openshift.io/name: NGX Storage iSCSI CSI Driver
+    apiVersion: v2
+    appVersion: "26.01"
+    created: "2026-11-23T12:13:22.519346267+03:00"
+    description: NGX Storage iSCSI CSI driver for Red Hat OpenShift
+    digest: 8cf76aa65d48007b789fd62aedd24843de281de4fe1a3572937b428a7b134826
+    kubeVersion: '>=1.25.0-0'
+    name: iscsi-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/iscsi-csi-ngxstorage-openshift-26.1.0.tgz
+    version: 26.1.0
+  - annotations:
+      charts.openshift.io/name: NGX Storage iSCSI CSI Driver
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.519091751+03:00"
+    description: NGX Storage iSCSI CSI driver for Red Hat OpenShift
+    digest: 0baf0bd270911ec28952b655da42d54648b3c3cbdb04a4d8390cc5ca52aad698
+    kubeVersion: '>=1.25.0-0'
+    name: iscsi-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/iscsi-csi-ngxstorage-openshift-1.0.0.tgz
+    version: 1.0.0
+  - annotations:
+      charts.openshift.io/name: NGX Storage iSCSI CSI Driver
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.518825361+03:00"
+    description: NGX Storage iSCSI CSI driver for Red Hat OpenShift
+    digest: 63a5ed09d8926a7ce74156748dd864743dc3f1d47a82ba22f24e3a7f6dd9334e
+    kubeVersion: '>=1.25.0-0'
+    name: iscsi-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/iscsi-csi-ngxstorage-openshift-0.8.4-beta.2.tgz
+    version: 0.8.4-beta.2
+  - annotations:
+      charts.openshift.io/name: NGXStorage iSCSI CSI Driver
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.518573253+03:00"
+    description: NGXStorage iSCSI CSI driver for Red Hat OpenShift
+    digest: ac07cfa96495d598d01c6e0fc4fd454cf5fbaf2ea7551816655ce2e8e3a6f8f5
+    kubeVersion: '>=1.25.0-0'
+    name: iscsi-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/iscsi-csi-ngxstorage-openshift-0.8.4-beta.1.tgz
+    version: 0.8.4-beta.1
+  - annotations:
+      charts.openshift.io/name: NGXStorage iSCSI CSI Driver
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.518319333+03:00"
+    description: NGXStorage iSCSI CSI driver for Red Hat OpenShift
+    digest: 6c7d7211aa2d0b672d211e2633b0ffa67804a69791c68eca81a494e906d8672b
+    kubeVersion: '>=1.25.0-0'
+    name: iscsi-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/iscsi-csi-ngxstorage-openshift-0.8.3.tgz
+    version: 0.8.3
+  - annotations:
+      charts.openshift.io/name: NGXStorage iSCSI CSI Driver
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.518058785+03:00"
+    description: NGXStorage iSCSI CSI driver for Red Hat OpenShift
+    digest: 500dd69731ba32ffa5ee78f4d1e9abc40c701096a79af31c52e4e98a0b8fd320
+    kubeVersion: '>=1.25.0-0'
+    name: iscsi-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/iscsi-csi-ngxstorage-openshift-0.8.2.tgz
+    version: 0.8.2
+  - annotations:
+      charts.openshift.io/name: NGXStorage iSCSI CSI Driver
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.51779972+03:00"
+    description: NGXStorage iSCSI CSI driver for Red Hat OpenShift
+    digest: ada84b17a54e0b6551df3fe36b608ee92f23e53b10f646dcc3b5def105050828
+    kubeVersion: '>=1.25.0-0'
+    name: iscsi-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/iscsi-csi-ngxstorage-openshift-0.8.1.tgz
+    version: 0.8.1
+  - annotations:
+      charts.openshift.io/name: NGXStorage iSCSI CSI Driver
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.517542933+03:00"
+    description: NGXStorage iSCSI CSI driver for Red Hat OpenShift
+    digest: 5a35c30bd1d5c156b2f7cb01fd0e9c9f2ce23a83f23938d8b8332ce23315a649
+    kubeVersion: '>=1.25.0-0'
+    name: iscsi-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/iscsi-csi-ngxstorage-openshift-0.8.0.tgz
+    version: 0.8.0
+  - annotations:
+      charts.openshift.io/name: NGXStorage iSCSI CSI Driver
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.517292238+03:00"
+    description: NGXStorage iSCSI CSI driver for Red Hat OpenShift
+    digest: 854106a3d3a042881875880609bfbe496a90ad6b9b919c4f787b204a2ff804b9
+    kubeVersion: '>=1.25.0-0'
+    name: iscsi-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/iscsi-csi-ngxstorage-openshift-0.7.0.tgz
+    version: 0.7.0
+  - annotations:
+      charts.openshift.io/name: NGXStorage iSCSI CSI Driver
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.517031942+03:00"
+    description: NGXStorage iSCSI CSI driver for Red Hat OpenShift
+    digest: 66885931f5d6cee56938d621684d50822125c8648d0c6ca5c39d2f6ad3c03bad
+    kubeVersion: '>=1.25.0-0'
+    name: iscsi-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/iscsi-csi-ngxstorage-openshift-0.6.0.tgz
+    version: 0.6.0
+  - annotations:
+      charts.openshift.io/name: NGXStorage iSCSI CSI Driver
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.516775483+03:00"
+    description: NGXStorage iSCSI CSI driver for Red Hat OpenShift
+    digest: 748f18f0d81a8ac34f6a342ecf06c2fa97c4a7efa1bf9924fc36d4936cf7c23a
+    kubeVersion: '>=1.25.0-0'
+    name: iscsi-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/iscsi-csi-ngxstorage-openshift-0.5.0.tgz
+    version: 0.5.0
+  - annotations:
+      charts.openshift.io/name: NGXStorage iSCSI CSI Driver
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.516510271+03:00"
+    description: NGXStorage iSCSI CSI driver for Red Hat OpenShift
+    digest: 770189b24e7e7b0cc92584416fd802e25779b53d82fa2256c42ee391be9203e5
+    kubeVersion: '>=1.25.0-0'
+    name: iscsi-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/iscsi-csi-ngxstorage-openshift-0.4.0.tgz
+    version: 0.4.0
+  - annotations:
+      charts.openshift.io/name: NGXStorage iSCSI CSI Driver
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.516242889+03:00"
+    description: NGXStorage iSCSI CSI driver for Red Hat OpenShift
+    digest: b450165a57b8724691b9a43bd6d9e59b850219a11714ab4d88a7a6b6788f72a1
+    kubeVersion: '>=1.25.0-0'
+    name: iscsi-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/iscsi-csi-ngxstorage-openshift-0.3.0.tgz
+    version: 0.3.0
+  - annotations:
+      charts.openshift.io/name: NGXStorage iSCSI CSI Driver
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-11-23T12:13:22.515854322+03:00"
+    description: NGXStorage iSCSI CSI driver for Red Hat OpenShift
+    digest: 9ed4ec8974950ab7a0d3de9da391793eaf26921592f87cbf1aaa75b0a46e6ddd
+    kubeVersion: '>=1.25.0-0'
+    name: iscsi-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/iscsi-csi-ngxstorage-openshift-0.2.0.tgz
+    version: 0.2.0
+  - annotations:
+      charts.openshift.io/name: NGX iSCSI CSI Driver
+    apiVersion: v2
+    appVersion: 2.0.3
+    created: "2026-11-23T12:13:22.515435608+03:00"
+    description: NGX iSCSI CSI driver for Red Hat OpenShift
+    digest: 9c0934a8164497094bb45fd00ca4371079f2401046954e2abb972fe96a039ce2
+    kubeVersion: '>=1.25.0-0'
+    name: iscsi-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/iscsi-csi-ngxstorage-openshift-0.1.0.tgz
+    version: 0.1.0
+  nfs-csi-ngxstorage-kubernetes:
+  - apiVersion: v2
+    appVersion: "26.01"
+    created: "2026-11-23T12:13:22.52375243+03:00"
+    description: NGX Storage NFS CSI driver for upstream Kubernetes
+    digest: 0ee76ccb016ae4b337398d15ff951ff53e656ed5ba704ba99f77dd7825aa0081
+    kubeVersion: '>=1.25.0-0'
+    name: nfs-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/nfs-csi-ngxstorage-kubernetes-26.1.1.tgz
+    version: 26.1.1
+  - apiVersion: v2
+    appVersion: "26.01"
+    created: "2026-11-23T12:13:22.523522821+03:00"
+    description: NGX Storage NFS CSI driver for upstream Kubernetes
+    digest: a82aabeed76060610d09c1beee6c639fa825bd913992259e1181944fef64593e
+    kubeVersion: '>=1.25.0-0'
+    name: nfs-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/nfs-csi-ngxstorage-kubernetes-26.1.0.tgz
+    version: 26.1.0
+  - apiVersion: v2
+    appVersion: 2.0.3
+    created: "2026-11-23T12:13:22.523287592+03:00"
+    description: NGX Storage NFS CSI driver for upstream Kubernetes
+    digest: 80c9582adcfb26949161af5bc2fa1ef849a53f8f9db226efa7d1d2824cf5359e
+    kubeVersion: '>=1.25.0-0'
+    name: nfs-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/nfs-csi-ngxstorage-kubernetes-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v2
+    appVersion: 2.0.3
+    created: "2026-11-23T12:13:22.523049505+03:00"
+    description: NGX Storage NFS CSI driver for upstream Kubernetes
+    digest: 9972b087ec71d290467cdf2a2f1205e3f5f959b024870cecc69af2a8edfa655e
+    kubeVersion: '>=1.25.0-0'
+    name: nfs-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/nfs-csi-ngxstorage-kubernetes-0.8.4-beta.2.tgz
+    version: 0.8.4-beta.2
+  - apiVersion: v2
+    appVersion: 2.0.3
+    created: "2026-11-23T12:13:22.522809182+03:00"
+    description: NGXStorage NFS CSI driver for upstream Kubernetes
+    digest: d2228c0e983a12bb522bdd8f477ce5bf18a45999a5a5de79d9ccac56e8650dfb
+    kubeVersion: '>=1.25.0-0'
+    name: nfs-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/nfs-csi-ngxstorage-kubernetes-0.8.4-beta.1.tgz
+    version: 0.8.4-beta.1
+  - apiVersion: v2
+    appVersion: 2.0.3
+    created: "2026-11-23T12:13:22.522570414+03:00"
+    description: NGXStorage NFS CSI driver for upstream Kubernetes
+    digest: 887ebc4aa43a95369bf553e6aa25feb8fb27083d477d4cafd67e64f75a999a23
+    kubeVersion: '>=1.25.0-0'
+    name: nfs-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/nfs-csi-ngxstorage-kubernetes-0.8.3.tgz
+    version: 0.8.3
+  - apiVersion: v2
+    appVersion: 2.0.3
+    created: "2026-11-23T12:13:22.522339386+03:00"
+    description: NGXStorage NFS CSI driver for upstream Kubernetes
+    digest: 21e52719e6907ab944e4ac2beadcd29b3c052c3004ffb998191f9766753c8577
+    kubeVersion: '>=1.25.0-0'
+    name: nfs-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/nfs-csi-ngxstorage-kubernetes-0.8.2.tgz
+    version: 0.8.2
+  - apiVersion: v2
+    appVersion: 2.0.3
+    created: "2026-11-23T12:13:22.522100093+03:00"
+    description: NGXStorage NFS CSI driver for upstream Kubernetes
+    digest: ded66d21eb99897b85f43d3e63589da42e39e0d740a2cea8f134d36c4e9aee9c
+    kubeVersion: '>=1.25.0-0'
+    name: nfs-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/nfs-csi-ngxstorage-kubernetes-0.8.1.tgz
+    version: 0.8.1
+  - apiVersion: v2
+    appVersion: 2.0.3
+    created: "2026-11-23T12:13:22.521856014+03:00"
+    description: NGXStorage NFS CSI driver for upstream Kubernetes
+    digest: 3169ef86a2fb96988860a62d3fd693366ebbf63a3cbcbc6c485fba21ee0b94d1
+    kubeVersion: '>=1.25.0-0'
+    name: nfs-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/nfs-csi-ngxstorage-kubernetes-0.8.0.tgz
+    version: 0.8.0
+  - apiVersion: v2
+    appVersion: 2.0.3
+    created: "2026-11-23T12:13:22.521604798+03:00"
+    description: NGXStorage NFS CSI driver for upstream Kubernetes
+    digest: 40d1e2b7d4073a84a8ce0536ee121360b5acbf26d53a7caa28a1e667f64745cf
+    kubeVersion: '>=1.25.0-0'
+    name: nfs-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/nfs-csi-ngxstorage-kubernetes-0.7.0.tgz
+    version: 0.7.0
+  - apiVersion: v2
+    appVersion: 2.0.3
+    created: "2026-11-23T12:13:22.52134526+03:00"
+    description: NGXStorage NFS CSI driver for upstream Kubernetes
+    digest: e3995e07b10a6d2200bb3007cf1a2bb335a56cfd6843f798f28b5a0bec4a460b
+    kubeVersion: '>=1.25.0-0'
+    name: nfs-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/nfs-csi-ngxstorage-kubernetes-0.6.0.tgz
+    version: 0.6.0
+  - apiVersion: v2
+    appVersion: 2.0.3
+    created: "2026-11-23T12:13:22.521084514+03:00"
+    description: NGXStorage NFS CSI driver for upstream Kubernetes
+    digest: 5a09a17a133d8403c47e2d5f7d7e5bf839f3c03718ef82177abf74806bb4702f
+    kubeVersion: '>=1.25.0-0'
+    name: nfs-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/nfs-csi-ngxstorage-kubernetes-0.5.0.tgz
+    version: 0.5.0
+  - apiVersion: v2
+    appVersion: 2.0.3
+    created: "2026-11-23T12:13:22.520799375+03:00"
+    description: NGXStorage NFS CSI driver for upstream Kubernetes
+    digest: 5ae799f43bdd1348038fce8664bc7a74527d358baf2f07f07a69b5c310fcf88d
+    kubeVersion: '>=1.25.0-0'
+    name: nfs-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/nfs-csi-ngxstorage-kubernetes-0.4.0.tgz
+    version: 0.4.0
+  - apiVersion: v2
+    appVersion: 2.0.3
+    created: "2026-11-23T12:13:22.520331982+03:00"
+    description: NGXStorage NFS CSI driver for upstream Kubernetes
+    digest: 041280b9282cd9006997ba5c026330582a8f2e652ef4caf4194f1b23fdbfc619
+    kubeVersion: '>=1.25.0-0'
+    name: nfs-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/nfs-csi-ngxstorage-kubernetes-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
+    appVersion: 2.0.3
+    created: "2026-11-23T12:13:22.519996122+03:00"
+    description: NGXStorage NFS CSI driver for upstream Kubernetes
+    digest: 92cb4bcb3ea04f74b73703eb6339812daf3f2ff6421eacf0e059918612e8b394
+    kubeVersion: '>=1.25.0-0'
+    name: nfs-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/nfs-csi-ngxstorage-kubernetes-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 2.0.3
+    created: "2026-11-23T12:13:22.519800564+03:00"
+    description: NGX NFS CSI driver for upstream Kubernetes
+    digest: 1e1e4a53162816d5eafd51fa99160f187579b2230cc73e1c2b9753adac33c7be
+    kubeVersion: '>=1.25.0-0'
+    name: nfs-csi-ngxstorage-kubernetes
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/nfs-csi-ngxstorage-kubernetes-0.1.0.tgz
+    version: 0.1.0
+  nfs-csi-ngxstorage-openshift:
+  - annotations:
+      charts.openshift.io/name: NGX Storage NFS CSI Driver
+    apiVersion: v2
+    appVersion: "26.01"
+    created: "2026-11-23T12:13:22.527870137+03:00"
+    description: NGX Storage NFS CSI driver for Red Hat OpenShift
+    digest: 293af7385aa0bfcdf3b931b2db8b6b044f4c4af92e77e040ccc9f7774f53a0ed
+    kubeVersion: '>=1.25.0-0'
+    name: nfs-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/nfs-csi-ngxstorage-openshift-26.1.1.tgz
+    version: 26.1.1
+  - annotations:
+      charts.openshift.io/name: NGX Storage NFS CSI Driver
+    apiVersion: v2
+    appVersion: "26.01"
+    created: "2026-11-23T12:13:22.527629542+03:00"
+    description: NGX Storage NFS CSI driver for Red Hat OpenShift
+    digest: 2a6328a68607072f7c6fb4386f66062503760e1138e1817dc9efb8104b759c4c
+    kubeVersion: '>=1.25.0-0'
+    name: nfs-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/nfs-csi-ngxstorage-openshift-26.1.0.tgz
+    version: 26.1.0
+  - annotations:
+      charts.openshift.io/name: NGX Storage NFS CSI Driver
+    apiVersion: v2
+    appVersion: 2.0.3
+    created: "2026-11-23T12:13:22.527388679+03:00"
+    description: NGX Storage NFS CSI driver for Red Hat OpenShift
+    digest: 69721c357223ece4eae36229827eb42e4736f3c854a1bfc3eed9e3668f8d7b0c
+    kubeVersion: '>=1.25.0-0'
+    name: nfs-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/nfs-csi-ngxstorage-openshift-1.0.0.tgz
+    version: 1.0.0
+  - annotations:
+      charts.openshift.io/name: NGX Storage NFS CSI Driver
+    apiVersion: v2
+    appVersion: 2.0.3
+    created: "2026-11-23T12:13:22.527150653+03:00"
+    description: NGX Storage NFS CSI driver for Red Hat OpenShift
+    digest: 0b113b402830e1e5b21e7340d23bb00bc901651c2766ca7033796a92096d1836
+    kubeVersion: '>=1.25.0-0'
+    name: nfs-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/nfs-csi-ngxstorage-openshift-0.8.4-beta.2.tgz
+    version: 0.8.4-beta.2
+  - annotations:
+      charts.openshift.io/name: NGXStorage NFS CSI Driver
+    apiVersion: v2
+    appVersion: 2.0.3
+    created: "2026-11-23T12:13:22.526906861+03:00"
+    description: NGXStorage NFS CSI driver for Red Hat OpenShift
+    digest: 4a5b2b2d2487048e7f2d1fccef8750c3c4f2b66db44a7218b553833191954eaa
+    kubeVersion: '>=1.25.0-0'
+    name: nfs-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/nfs-csi-ngxstorage-openshift-0.8.4-beta.1.tgz
+    version: 0.8.4-beta.1
+  - annotations:
+      charts.openshift.io/name: NGXStorage NFS CSI Driver
+    apiVersion: v2
+    appVersion: 2.0.3
+    created: "2026-11-23T12:13:22.526650701+03:00"
+    description: NGXStorage NFS CSI driver for Red Hat OpenShift
+    digest: c70ed5d294d249d73007a2f2e116964627fbccebfbe554b86075791e8cecd837
+    kubeVersion: '>=1.25.0-0'
+    name: nfs-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/nfs-csi-ngxstorage-openshift-0.8.3.tgz
+    version: 0.8.3
+  - annotations:
+      charts.openshift.io/name: NGXStorage NFS CSI Driver
+    apiVersion: v2
+    appVersion: 2.0.3
+    created: "2026-11-23T12:13:22.526412268+03:00"
+    description: NGXStorage NFS CSI driver for Red Hat OpenShift
+    digest: caeab9bd974a808db49757ccb8d80b2923dd5b4fd9406f897f05ac596ce9d631
+    kubeVersion: '>=1.25.0-0'
+    name: nfs-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/nfs-csi-ngxstorage-openshift-0.8.2.tgz
+    version: 0.8.2
+  - annotations:
+      charts.openshift.io/name: NGXStorage NFS CSI Driver
+    apiVersion: v2
+    appVersion: 2.0.3
+    created: "2026-11-23T12:13:22.52616537+03:00"
+    description: NGXStorage NFS CSI driver for Red Hat OpenShift
+    digest: 83624e41089fba5cd5a9d6f03926694d6bf21784359253f0c4a84673e3808e72
+    kubeVersion: '>=1.25.0-0'
+    name: nfs-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/nfs-csi-ngxstorage-openshift-0.8.1.tgz
+    version: 0.8.1
+  - annotations:
+      charts.openshift.io/name: NGXStorage NFS CSI Driver
+    apiVersion: v2
+    appVersion: 2.0.3
+    created: "2026-11-23T12:13:22.525906257+03:00"
+    description: NGXStorage NFS CSI driver for Red Hat OpenShift
+    digest: dc53ef8a263ffa1f4f42839bec72a01907634ca65c59d7fa7b886abdf2b871a2
+    kubeVersion: '>=1.25.0-0'
+    name: nfs-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/nfs-csi-ngxstorage-openshift-0.8.0.tgz
+    version: 0.8.0
+  - annotations:
+      charts.openshift.io/name: NGXStorage NFS CSI Driver
+    apiVersion: v2
+    appVersion: 2.0.3
+    created: "2026-11-23T12:13:22.525659528+03:00"
+    description: NGXStorage NFS CSI driver for Red Hat OpenShift
+    digest: b090be791d395bde049c2ea358ccc5a27a612e51a1b2a357de83f6c8371509c2
+    kubeVersion: '>=1.25.0-0'
+    name: nfs-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/nfs-csi-ngxstorage-openshift-0.7.0.tgz
+    version: 0.7.0
+  - annotations:
+      charts.openshift.io/name: NGXStorage NFS CSI Driver
+    apiVersion: v2
+    appVersion: 2.0.3
+    created: "2026-11-23T12:13:22.52540632+03:00"
+    description: NGXStorage NFS CSI driver for Red Hat OpenShift
+    digest: 37700b5aa1542c85a054379389291acaf4a074f5142cef8940d549a5c2be6b8d
+    kubeVersion: '>=1.25.0-0'
+    name: nfs-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/nfs-csi-ngxstorage-openshift-0.6.0.tgz
+    version: 0.6.0
+  - annotations:
+      charts.openshift.io/name: NGXStorage NFS CSI Driver
+    apiVersion: v2
+    appVersion: 2.0.3
+    created: "2026-11-23T12:13:22.525045151+03:00"
+    description: NGXStorage NFS CSI driver for Red Hat OpenShift
+    digest: 485151930b69b4c0be5f8765ca1f123f2a20a1325755688268ef79378b80cc91
+    kubeVersion: '>=1.25.0-0'
+    name: nfs-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/nfs-csi-ngxstorage-openshift-0.5.0.tgz
+    version: 0.5.0
+  - annotations:
+      charts.openshift.io/name: NGXStorage NFS CSI Driver
+    apiVersion: v2
+    appVersion: 2.0.3
+    created: "2026-11-23T12:13:22.524567803+03:00"
+    description: NGXStorage NFS CSI driver for Red Hat OpenShift
+    digest: 0214e9b2db7e9b162b7d74dc252360a9aaec54d6bffc380d9f4f5fcfd3b406a2
+    kubeVersion: '>=1.25.0-0'
+    name: nfs-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/nfs-csi-ngxstorage-openshift-0.4.0.tgz
+    version: 0.4.0
+  - annotations:
+      charts.openshift.io/name: NGXStorage NFS CSI Driver
+    apiVersion: v2
+    appVersion: 2.0.3
+    created: "2026-11-23T12:13:22.524343767+03:00"
+    description: NGXStorage NFS CSI driver for Red Hat OpenShift
+    digest: e87ffd6ce4a58edab542746c01467e72b5e2f933e76000875be84b2f9519c241
+    kubeVersion: '>=1.25.0-0'
+    name: nfs-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/nfs-csi-ngxstorage-openshift-0.3.0.tgz
+    version: 0.3.0
+  - annotations:
+      charts.openshift.io/name: NGXStorage NFS CSI Driver
+    apiVersion: v2
+    appVersion: 2.0.3
+    created: "2026-11-23T12:13:22.524150071+03:00"
+    description: NGXStorage NFS CSI driver for Red Hat OpenShift
+    digest: 19e06fa5c10345b6f2399e98469b0b91510e19abaf80e4cf36a2063791d0a1eb
+    kubeVersion: '>=1.25.0-0'
+    name: nfs-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/nfs-csi-ngxstorage-openshift-0.2.0.tgz
+    version: 0.2.0
+  - annotations:
+      charts.openshift.io/name: NGX NFS CSI Driver
+    apiVersion: v2
+    appVersion: 2.0.3
+    created: "2026-11-23T12:13:22.523945097+03:00"
+    description: NGX NFS CSI driver for Red Hat OpenShift
+    digest: 85b0f0e79104b254e93dfd544773a54674431082ab5f358f8a4792f04665e567
+    kubeVersion: '>=1.25.0-0'
+    name: nfs-csi-ngxstorage-openshift
+    type: application
+    urls:
+    - https://ngxstorage.github.io/helm/nfs-csi-ngxstorage-openshift-0.1.0.tgz
+    version: 0.1.0
+generated: "2026-11-23T12:13:22.501999601+03:00"

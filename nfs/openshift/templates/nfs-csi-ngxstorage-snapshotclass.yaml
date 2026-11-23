@@ -1,0 +1,8 @@
+{{- if .Values.snapshotClass.create }}
+apiVersion: snapshot.storage.k8s.io/v1
+kind: VolumeSnapshotClass
+metadata:
+  name: {{ include "ngxstorage.fullname" . }}
+driver: {{ include "ngxstorage.driverName" . }}
+deletionPolicy: Delete
+{{- end }}

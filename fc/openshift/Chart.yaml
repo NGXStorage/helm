@@ -1,0 +1,9 @@
+apiVersion: v2
+name: fc-csi-ngxstorage-openshift
+description: NGX Storage FC CSI driver for Red Hat OpenShift
+type: application
+kubeVersion: ">=1.25.0-0"
+version: 26.1.1
+appVersion: "26.01"
+annotations:
+  charts.openshift.io/name: NGX Storage FC CSI Driver

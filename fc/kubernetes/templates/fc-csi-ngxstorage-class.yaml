@@ -1,0 +1,24 @@
+apiVersion: storage.k8s.io/v1
+kind: CSIDriver
+metadata:
+  name: {{ include "ngxstorage.driverName" . }}
+spec:
+  attachRequired: true
+  fsGroupPolicy: None
+  podInfoOnMount: false
+  volumeLifecycleModes:
+    - Persistent
+---
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: {{ include "ngxstorage.fullname" . }}
+provisioner: {{ include "ngxstorage.driverName" . }}
+allowVolumeExpansion: true
+reclaimPolicy: Delete
+volumeBindingMode: Immediate
+parameters:
+  blocksize: 128k
+  deduplication: "on"
+  compression: "on"
+  permissions: "111111101"

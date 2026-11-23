@@ -1,0 +1,64 @@
+image:
+  repository: quay.io/ngxstorage/iscsi-csi-ngxstorage
+  tag: "26.01"
+  # When set, digest takes precedence over tag and renders repository@sha256:...
+  # Production release closure should pin this after live acceptance.
+  digest: "sha256:dc6e747abd35fa1e5b6431ec036f2c5c8b46eb0ece9f1c4447e1eaae768f4496"
+  pullPolicy: IfNotPresent
+
+# Console verbosity for the driver: debug, info, warn, error, dpanic, panic, fatal.
+logLevel: info
+
+# Distributed CSI mutation coordination uses a fixed pool of pre-created
+# coordination.k8s.io/v1 Lease shards. Supported values are 32, 64, 128 and
+# 256. Do not change this value during an ordinary rolling upgrade: every
+# controller/node pod in one release generation must use the same modulus.
+coordination:
+  shardCount: 128
+
+# Optional label prepended to the canonical CSI driver name. An empty value
+# preserves iscsi.csi.ngxstorage.com. A non-empty value changes the advertised
+# driver name to <prefix>.iscsi.csi.ngxstorage.com so a second driver instance can
+# serve a distinct NGX Storage backend on the same cluster (for example, prefix 201
+# produces 201.iscsi.csi.ngxstorage.com). The same prefix also names the driver
+# resources (DaemonSet, Deployment, RBAC, StorageClass, VolumeSnapshotClass) as
+# <prefix>-iscsi-csi-ngxstorage so cluster-scoped resources do not collide.
+driverNamePrefix: ""
+
+# Where the node DaemonSet may run: all (every node), master, or worker.
+# Use worker when storage connectivity is available only from worker-node
+# interfaces; use all (or master) when the relevant hosts can reach the backend.
+nodePlacement: all
+
+# Where the controller Deployment may run: master (control plane, default),
+# worker, or all. The controller is light and belongs on control-plane nodes.
+controllerPlacement: master
+
+# Liveness probe HTTP ports for the controller and node sidecars. The node
+# port must differ when a second driver instance runs in hostNetwork on the
+# same worker because every node probe binds 0.0.0.0.
+controllerLivenessPort: 9808
+nodeLivenessPort: 9812
+
+# Prefer an existing Secret in production. Set create=true only when managing
+# the Secret through Helm; apiKey will then be stored in the rendered release.
+secret:
+  create: false
+  name: iscsi-csi-ngxstorage-config
+  storageIPs: ""
+  poolName: ""
+  apiKey: ""
+  portalGroup: ""
+
+snapshotClass:
+  create: true
+
+# CSI sidecar images. Defaults point at the NGX Storage Quay mirror
+# with immutable multi-arch digests; override per environment if needed.
+sidecars:
+  csiAttacher: quay.io/ngxstorage/csi-sidecars/csi-attacher@sha256:b9dc9a714a484ccdeeb6f86d88d4db9b7a5ecfc5a55da6db3a60bb3fa33c278a
+  csiNodeDriverRegistrar: quay.io/ngxstorage/csi-sidecars/csi-node-driver-registrar@sha256:f9de845b170155199f2a2a3f9531cf13d78e31235e9db6b6582a8b0db0a50dad
+  csiProvisioner: quay.io/ngxstorage/csi-sidecars/csi-provisioner@sha256:a4b0b1a37605b7b04a293e136edf7006ec1786a8eb3f4e5a945f81d667dcc371
+  csiResizer: quay.io/ngxstorage/csi-sidecars/csi-resizer@sha256:ea1d25e23479000c7e8eeb92d827df66258df4e482ca054c5e7ce3fc0f5c41a5
+  csiSnapshotter: quay.io/ngxstorage/csi-sidecars/csi-snapshotter@sha256:42af0929bcd60a43499825c078a60ff0534e08af8fbeb283aa391be40feb9f3e
+  livenessProbe: quay.io/ngxstorage/csi-sidecars/livenessprobe@sha256:06da0d5b8908072f2e4522692aee8dc119fba7247a9658497e1153992cd777e9

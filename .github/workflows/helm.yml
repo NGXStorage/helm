@@ -1,0 +1,39 @@
+name: Helm charts
+
+on:
+  pull_request:
+  workflow_dispatch:
+  push:
+    branches: [master]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: azure/setup-helm@1a275c3b69536ee54be43f2070a358922e12c8d4 # v4
+        with:
+          version: v3.21.3
+      - uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff # v5
+        with:
+          go-version: '1.24.x'
+      - name: Install kubeconform
+        run: go install github.com/yannh/kubeconform/cmd/kubeconform@v0.7.0
+      - name: Add Go tools to PATH
+        run: echo "$(go env GOPATH)/bin" >> "$GITHUB_PATH"
+      - name: Lint, render, validate, and check coexistence
+        run: make test
+      - name: Verify published release image contract
+        run: REQUIRE_IMAGE_DIGEST=1 make published-image-contract
+      - name: Package Helm repository
+        run: make index REPO_URL=https://ngxstorage.github.io/helm
+      - name: Verify Pages directory matches the packaged repository
+        run: make check-pages
+      - name: Upload chart repository artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: ngxstorage-helm-repository
+          path: repo/

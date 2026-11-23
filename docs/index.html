@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Install NGX Storage CSI drivers for Kubernetes and OpenShift from the NGX Storage Helm repository.">
+  <title>NGX Storage Helm Charts</title>
+  <style>
+    :root { color-scheme: light; font-family: Inter, system-ui, sans-serif; color: #172d2b; background: #f5f8f6; }
+    body { margin: 0; }
+    main, .brand { max-width: 54rem; margin: auto; padding-inline: 1.5rem; }
+    header { background: #103b34; color: white; }
+    .brand { padding-block: 1rem; font-weight: 700; }
+    main { padding-block: 2.5rem; }
+    h1 { font-size: clamp(2rem, 5vw, 3.25rem); letter-spacing: -.045em; line-height: 1.1; margin: 0 0 .75rem; }
+    h2 { font-size: 1.35rem; margin: 2rem 0 .5rem; }
+    p { line-height: 1.65; margin: .5rem 0 1rem; }
+    a { color: #086452; text-underline-offset: .18em; }
+    pre { background: #122d2a; color: #edf9f4; padding: 1rem; border-radius: .6rem; overflow-x: auto; line-height: 1.5; }
+    code { font-family: ui-monospace, monospace; font-size: .9em; }
+    .table-scroll { overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; text-align: left; }
+    th, td { border-bottom: 1px solid #cbdad4; padding: .65rem .75rem .65rem 0; }
+    footer { border-top: 1px solid #cbdad4; margin-top: 2rem; padding-top: 1rem; }
+  </style>
+</head>
+<body>
+  <header><div class="brand">NGX Storage</div></header>
+  <main>
+    <h1>Helm charts for NGX Storage</h1>
+    <p>Install the NFS, Fibre Channel or iSCSI CSI driver on Kubernetes or OpenShift. This guide uses chart version <code>26.1.1</code>.</p>
+
+    <h2>Available charts</h2>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th scope="col">Protocol</th><th scope="col">Upstream Kubernetes</th><th scope="col">Red Hat OpenShift</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">FC</th><td><code>fc-csi-ngxstorage-kubernetes</code></td><td><code>fc-csi-ngxstorage-openshift</code></td></tr>
+          <tr><th scope="row">iSCSI</th><td><code>iscsi-csi-ngxstorage-kubernetes</code></td><td><code>iscsi-csi-ngxstorage-openshift</code></td></tr>
+          <tr><th scope="row">NFS</th><td><code>nfs-csi-ngxstorage-kubernetes</code></td><td><code>nfs-csi-ngxstorage-openshift</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>1. Add the chart repository</h2>
+    <pre><code>helm repo add ngxstorage https://ngxstorage.github.io/helm
+helm repo update ngxstorage
+helm search repo ngxstorage</code></pre>
+
+    <h2>2. Prepare your cluster</h2>
+    <p>Choose a protocol the workers can reach. FC needs fabric zoning and multipath. iSCSI needs initiators and portal access. NFS needs access to the data IP and a worker mount helper. The default charts also expect the snapshot CRDs and controller on the cluster.</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th scope="col">Driver</th><th scope="col">Protocol value</th><th scope="col">Additional Secret key</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">NFS</th><td><code>nfs</code></td><td><code>data-ip</code></td></tr>
+          <tr><th scope="row">Fibre Channel</th><td><code>fc</code></td><td><code>fc-target-names</code></td></tr>
+          <tr><th scope="row">iSCSI</th><td><code>iscsi</code></td><td><code>portal-group</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>For FC, the <code>fc-target-names</code> file holds a comma-separated array of pre-created target names (for example <code>target-a,target-b</code>), not WWPNs.</p>
+    <p>Set <code>secret_dir</code> below to a private directory with a file for each Secret key. Files contain the field value with no trailing newline. <code>storage-ips</code> contains comma-separated management addresses. Choose the platform and protocol values before running the commands. This example creates a new namespace and Secret.</p>
+    <pre><code>protocol=nfs                         # nfs, fc or iscsi
+platform=kubernetes                  # kubernetes or openshift
+extra_key=data-ip                     # select the key from the table
+secret_dir=/path/to/private/secret-files
+namespace="ngxstorage-${protocol}"
+release="${protocol}-csi-ngxstorage"
+
+kubectl config current-context
+kubectl create namespace "$namespace"
+kubectl -n "$namespace" create secret generic "${release}-config" \
+  --from-file=storage-ips="$secret_dir/storage-ips" \
+  --from-file=pool-name="$secret_dir/pool-name" \
+  --from-file=api-key="$secret_dir/api-key" \
+  --from-file="$extra_key=$secret_dir/$extra_key"</code></pre>
+
+    <h2>3. Install and check the driver</h2>
+    <pre><code>helm upgrade --install "$release" "ngxstorage/${release}-${platform}" \
+  --namespace "$namespace" --version 26.1.1 \
+  --set-string "secret.name=${release}-config" --wait --timeout 5m
+
+kubectl -n "$namespace" get pods -o wide
+kubectl get csidriver "${protocol}.csi.ngxstorage.com"</code></pre>
+    <p>After the driver pods are ready, create a test claim using the installed StorageClass. Mount the claim in a pod and verify that a file written to the volume can be read back.</p>
+    <footer><a href="index.yaml">Chart index</a></footer>
+  </main>
+</body>
+</html>

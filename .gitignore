@@ -1,0 +1,8 @@
+# Local Python caches from chart validation scripts.
+__pycache__/
+*.py[cod]
+
+# Local credentials; published chart packages remain tracked.
+/.env
+/.env.*
+!/.env.example

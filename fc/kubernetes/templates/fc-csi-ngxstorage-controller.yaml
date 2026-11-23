@@ -1,0 +1,224 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "ngxstorage.fullname" . }}-controller
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app.kubernetes.io/name: fc-csi-ngxstorage
+    app.kubernetes.io/component: controller
+spec:
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 0
+      maxUnavailable: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: fc-csi-ngxstorage
+      app.kubernetes.io/component: controller
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: fc-csi-ngxstorage
+        app.kubernetes.io/component: controller
+        app.kubernetes.io/instance: {{ include "ngxstorage.fullname" . }}
+    spec:
+      serviceAccountName: {{ include "ngxstorage.fullname" . }}-controller
+      priorityClassName: system-cluster-critical
+      nodeSelector:
+        kubernetes.io/os: linux
+        {{- if eq .Values.controllerPlacement "master" }}
+        node-role.kubernetes.io/master: ""
+        {{- else if eq .Values.controllerPlacement "worker" }}
+        node-role.kubernetes.io/worker: ""
+        {{- end }}
+      tolerations:
+        - key: node-role.kubernetes.io/master
+          operator: Exists
+          effect: NoSchedule
+        - key: node-role.kubernetes.io/control-plane
+          operator: Exists
+          effect: NoSchedule
+        - key: CriticalAddonsOnly
+          operator: Exists
+      securityContext: {}
+      containers:
+        - name: external-provisioner
+          image: {{ .Values.sidecars.csiProvisioner }}
+          imagePullPolicy: IfNotPresent
+          args:
+            - --csi-address=/csi/csi.sock
+            - --leader-election
+            - --leader-election-namespace=$(POD_NAMESPACE)
+            - --timeout=300s
+            - --feature-gates=VolumeAttributesClass=false
+            - --v=2
+          env:
+            - name: POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop: ["ALL"]
+          volumeMounts:
+            - name: socket-dir
+              mountPath: /csi
+        - name: external-attacher
+          image: {{ .Values.sidecars.csiAttacher }}
+          imagePullPolicy: IfNotPresent
+          args:
+            - --csi-address=/csi/csi.sock
+            - --leader-election
+            - --leader-election-namespace=$(POD_NAMESPACE)
+            - --timeout=300s
+            - --v=2
+          env:
+            - name: POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop: ["ALL"]
+          volumeMounts:
+            - name: socket-dir
+              mountPath: /csi
+        - name: external-resizer
+          image: {{ .Values.sidecars.csiResizer }}
+          imagePullPolicy: IfNotPresent
+          args:
+            - --csi-address=/csi/csi.sock
+            - --leader-election
+            - --leader-election-namespace=$(POD_NAMESPACE)
+            - --timeout=300s
+            - --feature-gates=VolumeAttributesClass=false
+            - --v=2
+          env:
+            - name: POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop: ["ALL"]
+          volumeMounts:
+            - name: socket-dir
+              mountPath: /csi
+        - name: external-snapshotter
+          image: {{ .Values.sidecars.csiSnapshotter }}
+          imagePullPolicy: IfNotPresent
+          args:
+            - --csi-address=/csi/csi.sock
+            - --leader-election
+            - --leader-election-namespace=$(POD_NAMESPACE)
+            - --timeout=300s
+            - --v=2
+          env:
+            - name: POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop: ["ALL"]
+          volumeMounts:
+            - name: socket-dir
+              mountPath: /csi
+        - name: liveness-probe
+          image: {{ .Values.sidecars.livenessProbe }}
+          imagePullPolicy: IfNotPresent
+          args:
+            - --csi-address=/csi/csi.sock
+            - --http-endpoint=0.0.0.0:{{ .Values.controllerLivenessPort }}
+            - --probe-timeout=3s
+            - --v=2
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop: ["ALL"]
+          volumeMounts:
+            - name: socket-dir
+              mountPath: /csi
+        - name: fc-csi-ngxstorage
+          image: {{ include "ngxstorage.image" . }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          args:
+            - --endpoint=unix:///csi/csi.sock
+            - --role=controller
+            - --ip=$(STORAGE_IPS)
+            - --pool-name=$(STORAGE_POOL_NAME)
+            - --fc-target-names=$(FC_TARGET_NAMES)
+            - --api-key=$(STORAGE_API_KEY)
+            - --log={{ .Values.logLevel }}
+            {{- if .Values.driverNamePrefix }}
+            # Advertise a distinct CSI identity for this backend so multiple
+            # driver instances can coexist on one cluster.
+            - --driver-prefix={{ .Values.driverNamePrefix }}
+            {{- end }}
+          env:
+            - name: NGX_COORDINATION_LEASE_PREFIX
+              value: {{ include "ngxstorage.fullname" . | quote }}
+            - name: NGX_COORDINATION_SHARD_COUNT
+              value: {{ (.Values.coordination.shardCount | default 128) | quote }}
+            - name: POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: POD_UID
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.uid
+            - name: STORAGE_IPS
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.secret.name }}
+                  key: storage-ips
+            - name: STORAGE_POOL_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.secret.name }}
+                  key: pool-name
+            - name: FC_TARGET_NAMES
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.secret.name }}
+                  key: fc-target-names
+            - name: STORAGE_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.secret.name }}
+                  key: api-key
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: {{ .Values.controllerLivenessPort }}
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 5
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop: ["ALL"]
+          volumeMounts:
+            - name: socket-dir
+              mountPath: /csi
+      volumes:
+        - name: socket-dir
+          emptyDir: {}

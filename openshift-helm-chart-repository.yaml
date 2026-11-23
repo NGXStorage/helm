@@ -1,0 +1,9 @@
+apiVersion: helm.openshift.io/v1beta1
+kind: HelmChartRepository
+metadata:
+  name: ngxstorage-csi
+spec:
+  name: NGX Storage CSI Drivers
+  description: NGX Storage FC, iSCSI, and NFS CSI drivers
+  connectionConfig:
+    url: https://ngxstorage.github.io/helm

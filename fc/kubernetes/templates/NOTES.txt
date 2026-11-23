@@ -1,0 +1,4 @@
+NGX Storage FC CSI driver has been installed.
+
+Verify the deployment with:
+  kubectl -n {{ .Release.Namespace }} get pods -l app.kubernetes.io/name=fc-csi-ngxstorage
